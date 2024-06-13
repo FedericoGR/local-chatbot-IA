@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Local</title>
+  <link href='/style.css' rel='stylesheet'>
+</head>
+<body>
+  <main>
+    <ul>
+    <li class="message bot">
+      <span>GPT</span>
+      <p>Respuesta del bot</p>
+    </li>
+
+      <li class="message user">
+      <span>User</span>
+      <p>Respuesta del usuario</p>
+    </li>
+      <li class="message bot">
+      <span>GPT</span>
+      <p>Respuesta del usuario y es una respuesta muy
+        larga para ver que no se rompe nada
+      </p>
+    </li>
+    </ul>
+  </main>
+
+  <form>
+    <input placeholder="Escribe tu mensaje aqui...">
+    <button>Enviar</button>
+  </form>
+
+  <template id="message-template">
+    <li class="message">
+      <span></span>
+      <p></p>
+    </li>
+  </template>
+
+</body>
+<script type="module" src="/main.js"></script>
+</html>

@@ -1,0 +1,105 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #131313;
+    display: grid;
+    place-content: center;
+    height: 100dvh;
+    height: 100vh;
+}
+main {
+    width: 400px;
+    max-width: 100%;
+    height: 70vh;
+    background: #3b3b3b;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    margin-bottom: 16px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+  
+  ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  
+  }
+  
+  .message {
+    display: flex;
+    flex-direction: column;
+    margin: 4px 0;
+    padding: 4px 8px;
+    color: rgb(226, 224, 224);
+  
+    span {
+      width: 36px;
+      height: 36px;
+      background: #7a7a7a;
+      font-size: 12px;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius:100px;
+    }
+  
+    p {
+      border-radius: 4px;
+      padding: 4px 8px;
+      margin-top: 4px;
+    }
+  
+    &.user {
+      align-self: flex-end;
+      align-items: flex-end;
+      span, p {
+        background: rgb(1, 45, 95);
+      }
+    }
+  
+    &.bot {
+      align-self: flex-start;
+      span, p {
+        background: rgb(26, 122, 63);
+      }
+    }
+  }
+
+  form {
+    display: flex;
+    gap: 8px;
+    input {
+        border-radius: 100px;
+        flex-grow: 1;
+        border: 0;
+        padding: 8px;
+        border: 1px solid #ccc;
+        color: white;
+        background-color: #7a7a7a;
+
+        &::placeholder {
+            color: #eeecec;
+        }
+    }
+    button {
+        background: rgb(1, 106, 175);
+        border: 0;
+        color: white;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 6px;
+
+        &:hover {
+            background: rgb(1, 34, 56);
+        }
+
+        &[disabled] {
+            background: rgb(111, 136, 153);
+            opacity: .6;
+            pointer-events: none;
+        }
+    }} 
