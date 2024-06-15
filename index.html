@@ -3,42 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Local</title>
-  <link href='/style.css' rel='stylesheet'>
+  <title>Llama-3 Chatbot</title>
+  <link href='./style.css' rel='stylesheet'>
 </head>
 <body>
-  <main>
-    <ul>
-    <li class="message bot">
-      <span>GPT</span>
-      <p>Respuesta del bot</p>
-    </li>
+  <header>
+    <h1>Local Chat-Bot</h1>
+    <a href="https://github.com/FedericoGR" target="_blank" rel="noopener noreferrer"><img src="github-mark-white.svg" alt="Logo GitHub" class="git-avatar"></a>
+  </header>
 
-      <li class="message user">
-      <span>User</span>
-      <p>Respuesta del usuario</p>
-    </li>
-      <li class="message bot">
-      <span>GPT</span>
-      <p>Respuesta del usuario y es una respuesta muy
-        larga para ver que no se rompe nada
-      </p>
-    </li>
+  <main>
+    <div class="loading">
+      <h4>Loading Llama-3-8B-Instruct...</h4>
+      <h5>Powered by Web-LLM</h5>
+    </div>
+
+    <ul class="messages">
     </ul>
   </main>
 
-  <form>
-    <input placeholder="Escribe tu mensaje aqui...">
-    <button>Enviar</button>
-  </form>
 
   <template id="message-template">
     <li class="message">
-      <span></span>
+      <span class="name"></span>
       <p></p>
     </li>
   </template>
 
+    <small>&nbsp;</small>
+  
+  <form>
+    <input placeholder="Type a message..." aria-label="Type a message">
+    <button>Send</button>
+  </form>
+
+  <script type="module" src="./main.js"></script>
+  <script type="module" src="./worker.js"></script>
 </body>
-<script type="module" src="/main.js"></script>
 </html>
